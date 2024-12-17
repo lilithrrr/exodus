@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exodus Artistry</title>
     <meta name="description" content="Contemporary Art Exhibition" />
-    <link rel="stylesheet" href="/src/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Link to the external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Landing Screen -->
     <section class="landing-screen">
-      <h1>EXODUS</h1>
-        
+      <div class="landing-content">
+        <h1>EXODUS</h1>
+        <p>A Contemporary Art Exhibition by University Students</p>
+      </div>
     </section>
+
     <!-- Main Content -->
     <div class="main-content hide-content">
       <!-- Hero Section -->
@@ -23,6 +31,7 @@
           <p>A Contemporary Art Exhibition by University Students</p>
         </div>
       </section>
+
       <!-- About Section -->
       <section id="about">
         <div class="container">
@@ -34,43 +43,68 @@
           </p>
         </div>
       </section>
+
       <!-- Artists Section -->
       <section id="artists" class="artists">
         <div class="container">
           <h2>Artists</h2>
           <div class="artist-grid">
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Artist 1" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027"
+                alt="Artist 1"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 1</p>
               </div>
             </div>
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" alt="Artist 2" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
+                alt="Artist 2"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 2</p>
               </div>
             </div>
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" alt="Artist 3" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07"
+                alt="Artist 3"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 3</p>
               </div>
             </div>
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb" alt="Artist 4" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
+                alt="Artist 4"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 4</p>
               </div>
             </div>
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9" alt="Artist 5" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9"
+                alt="Artist 5"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 5</p>
               </div>
             </div>
             <div class="artist-card">
-              <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86" alt="Artist 6" loading="lazy">
+              <img
+                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86"
+                alt="Artist 6"
+                loading="lazy"
+              />
               <div class="artist-overlay">
                 <p>Artist 6</p>
               </div>
@@ -78,26 +112,20 @@
           </div>
         </div>
       </section>
+
       <!-- Sponsors Section -->
       <section id="sponsors">
         <div class="container">
           <h2>Sponsors</h2>
           <div class="sponsor-grid">
-            <div class="sponsor-card">
-              <span>Sponsor 1</span>
-            </div>
-            <div class="sponsor-card">
-              <span>Sponsor 2</span>
-            </div>
-            <div class="sponsor-card">
-              <span>Sponsor 3</span>
-            </div>
-            <div class="sponsor-card">
-              <span>Sponsor 4</span>
-            </div>
+            <div class="sponsor-card">Sponsor 1</div>
+            <div class="sponsor-card">Sponsor 2</div>
+            <div class="sponsor-card">Sponsor 3</div>
+            <div class="sponsor-card">Sponsor 4</div>
           </div>
         </div>
       </section>
+
       <!-- Footer -->
       <footer>
         <div class="container">
@@ -105,19 +133,19 @@
         </div>
       </footer>
     </div>
+
+    <!-- JavaScript -->
     <script>
-      // Landing screen and content visibility
-      window.addEventListener('scroll', function() {
+      // Landing screen fade-out and content visibility
+      window.addEventListener("scroll", function () {
+        const landingScreen = document.querySelector(".landing-screen");
+        const mainContent = document.querySelector(".main-content");
+
         if (window.scrollY > window.innerHeight * 0.5) {
-          const landingScreen = document.querySelector('.landing-screen');
-          const mainContent = document.querySelector('.main-content');
-          
-          if (landingScreen && mainContent) {
-            landingScreen.style.opacity = '0';
-            landingScreen.style.pointerEvents = 'none';
-            mainContent.classList.remove('hide-content');
-            mainContent.classList.add('show-content');
-          }
+          landingScreen.style.opacity = "0";
+          landingScreen.style.pointerEvents = "none";
+          mainContent.classList.remove("hide-content");
+          mainContent.classList.add("show-content");
         }
       });
     </script>
