@@ -1,8 +1,122 @@
-/* src/index.css */
-@import './styles/base.css';
-@import './styles/navigation.css';
-@import './styles/sections.css';
-@import './styles/artists.css';
-@import './styles/sponsors.css';
-@import './styles/footer.css';
-@import './styles/responsive.css';
+/* Common Section Styles */
+section {
+  padding: 5rem 0;
+}
+
+section h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* About Section */
+#about {
+  text-align: left;
+}
+
+#about h2 {
+  text-align: left;
+}
+
+#about p {
+  max-width: 800px;
+}
+
+/* Artists Section */
+.artists {
+  text-align: center;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.artist-card {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.artist-card:hover img {
+  transform: scale(1.1);
+}
+
+.artist-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.artist-card:hover .artist-overlay {
+  opacity: 1;
+}
+
+.artist-overlay p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Sponsors Section */
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.sponsor-card {
+  aspect-ratio: 16/9;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.sponsor-card:hover img {
+  opacity: 1;
+}
+
+/* Responsive Design for Sections */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 3rem;
+  }
+  
+  .artist-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .sponsor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
