@@ -1,4 +1,4 @@
-/* src/styles/base.css */
+* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 2rem;
 }
 
-/* src/styles/navigation.css */
+/* Navigation Menu */
 .top-nav {
   position: fixed;
   top: 0;
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
 }
 
-/* src/styles/sections.css */
+/* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -114,105 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-section {
-  padding: 5rem 0;
-}
-
-section h2 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-#about {
-  text-align: left;
-}
-
-#about h2 {
-  text-align: left;
-}
-
-/* src/styles/artists.css */
-.artist-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.artist-card {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-
-.artist-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-
-.artist-card:hover img {
-  transform: scale(1.1);
-}
-
-.artist-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.artist-card:hover .artist-overlay {
-  opacity: 1;
-}
-
-.artist-overlay p {
-  color: white;
-  font-size: 1.5rem;
-}
-
-/* src/styles/sponsors.css */
-.sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
-  align-items: center;
-}
-
-.sponsor-card {
-  aspect-ratio: 16/9;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.sponsor-card:hover {
-  transform: scale(1.05);
-}
-
-.sponsor-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.sponsor-card:hover img {
-  opacity: 1;
-}
-
-/* src/styles/footer.css */
+/* Footer */
 footer {
   padding: 3rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -241,7 +143,11 @@ footer {
   opacity: 0.7;
 }
 
-/* src/styles/responsive.css */
+footer p {
+  opacity: 0.7;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
@@ -249,10 +155,6 @@ footer {
 
   .hero p {
     font-size: 1.25rem;
-  }
-
-  section h2 {
-    font-size: 3rem;
   }
 
   .nav-content {
